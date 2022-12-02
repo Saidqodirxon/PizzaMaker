@@ -1,5 +1,35 @@
 // Umumiy JS kodlari variablelar
 let form = document.querySelector("form");
+let umumiyNarx = 1;
+document.querySelector(
+  ".narxlovchi"
+).textContent = `Pitsa narxi : ${umumiyNarx}-USD`;
+
+// // non start
+let nonInput = document.querySelector("#non");
+let nonDiv = document.querySelector("#pitsalars");
+
+nonInput.addEventListener("input", (e) => {
+  e.preventDefault();
+
+  if (nonInput.checked === true) {
+    nonDiv.style.background = "#e8944f";
+    umumiyNarx += 0.5;
+    document.querySelector(
+      ".narxlovchi"
+    ).textContent = `Pitsa narxi : ${umumiyNarx}-USD`;
+
+    document.getElementById("non").value = "active";
+  } else {
+    umumiyNarx -= 0.5;
+    document.querySelector(
+      ".narxlovchi"
+    ).textContent = `Pitsa narxi : ${umumiyNarx}-USD`;
+    nonDiv.style.background = "white";
+
+    document.getElementById("non").value = "disable";
+  }
+});
 
 // Kolbasa start
 let kolbasaInput = document.querySelector("#kolbasa");
@@ -14,11 +44,19 @@ kolbasaInput.addEventListener("input", (e) => {
   if (kolbasaInput.checked === true) {
     kolbasaDiv.classList.add("kolbasalar");
     kolbasaDiv.style.display = "block";
+    umumiyNarx += 1;
+    document.querySelector(
+      ".narxlovchi"
+    ).textContent = `Pitsa narxi : ${umumiyNarx}-USD`;
     // kolbasaText.textContent = `Kolbasa qoshildi `;
     document.getElementById("kolbasa").value = "active";
   } else {
     kolbasaDiv.classList.add("kolbasalar");
     kolbasaDiv.style.display = "none";
+    umumiyNarx -= 1;
+    document.querySelector(
+      ".narxlovchi"
+    ).textContent = `Pitsa narxi : ${umumiyNarx}-USD`;
     // kolbasaText.textContent = `Kolbasa olindi `;
     document.getElementById("kolbasa").value = "disable";
   }
@@ -40,11 +78,19 @@ pamidor.addEventListener("input", (e) => {
   if (pamidor.checked === true) {
     pamidorDiv.classList.add("pamidorlar");
     pamidorDiv.style.display = "block";
+    umumiyNarx += 0.5;
+    document.querySelector(
+      ".narxlovchi"
+    ).textContent = `Pitsa narxi : ${umumiyNarx}-USD`;
     // pamidorText.textContent = `Pamidor qoshildi `;
     document.getElementById("pamidor").value = "active";
   } else {
     pamidorDiv.classList.add("pamidorlar");
     pamidorDiv.style.display = "none";
+    umumiyNarx -= 0.5;
+    document.querySelector(
+      ".narxlovchi"
+    ).textContent = `Pitsa narxi : ${umumiyNarx}-USD`;
     // pamidorText.textContent = `Pamidor olindi `;
     document.getElementById("pamidor").value = "disable";
   }
@@ -66,11 +112,19 @@ qoziqorin.addEventListener("input", (e) => {
   if (qoziqorin.checked === true) {
     qoziqorinDiv.classList.add("qoziqorinlar");
     qoziqorinDiv.style.display = "block";
+    umumiyNarx += 0.5;
+    document.querySelector(
+      ".narxlovchi"
+    ).textContent = `Pitsa narxi : ${umumiyNarx}-USD`;
     // qoziqorinText.textContent = `qoziqorin qoshildi `;
     document.getElementById("qoziqorin").value = "active";
   } else {
     qoziqorinDiv.classList.add("qoziqorinlar");
     qoziqorinDiv.style.display = "none";
+    umumiyNarx -= 0.5;
+    document.querySelector(
+      ".narxlovchi"
+    ).textContent = `Pitsa narxi : ${umumiyNarx}-USD`;
     // qoziqorinText.textContent = `qoziqorin olindi `;
     document.getElementById("qoziqorin").value = "disable";
   }
@@ -92,11 +146,19 @@ pishloq.addEventListener("input", (e) => {
   if (pishloq.checked === true) {
     pishloqDiv.classList.add("pishloqlar");
     pishloqDiv.style.display = "block";
+    umumiyNarx += 0.5;
+    document.querySelector(
+      ".narxlovchi"
+    ).textContent = `Pitsa narxi : ${umumiyNarx}-USD`;
     // pishloqText.textContent = `pishloq qoshildi `;
     document.getElementById("pishloq").value = "active";
   } else {
     pishloqDiv.classList.add("pishloqlar");
     pishloqDiv.style.display = "none";
+    umumiyNarx -= 0.5;
+    document.querySelector(
+      ".narxlovchi"
+    ).textContent = `Pitsa narxi : ${umumiyNarx}-USD`;
     // pishloqText.textContent = `pishloq olindi `;
     document.getElementById("pishloq").value = "disable";
   }
@@ -118,11 +180,19 @@ zaytun.addEventListener("input", (e) => {
   if (zaytun.checked === true) {
     zaytunDiv.classList.add("zaytunlar");
     zaytunDiv.style.display = "block";
+    umumiyNarx += 0.5;
+    document.querySelector(
+      ".narxlovchi"
+    ).textContent = `Pitsa narxi : ${umumiyNarx}-USD`;
     // zaytunText.textContent = `zaytun qoshildi `;
     document.getElementById("zaytun").value = "active";
   } else {
     zaytunDiv.classList.add("zaytunlar");
     zaytunDiv.style.display = "none";
+    umumiyNarx -= 0.5;
+    document.querySelector(
+      ".narxlovchi"
+    ).textContent = `Pitsa narxi : ${umumiyNarx}-USD`;
     // zaytunText.textContent = `zaytun olindi `;
     document.getElementById("zaytun").value = "disable";
   }
@@ -144,11 +214,19 @@ mayonez.addEventListener("input", (e) => {
   if (mayonez.checked === true) {
     mayonezDiv.classList.add("mayonezlar");
     mayonezDiv.style.display = "block";
+    umumiyNarx += 0.5;
+    document.querySelector(
+      ".narxlovchi"
+    ).textContent = `Pitsa narxi : ${umumiyNarx}-USD`;
     // mayonezText.textContent = `mayonez qoshildi `;
     document.getElementById("mayonez").value = "active";
   } else {
     mayonezDiv.classList.add("mayonezlar");
     mayonezDiv.style.display = "none";
+    umumiyNarx -= 0.5;
+    document.querySelector(
+      ".narxlovchi"
+    ).textContent = `Pitsa narxi : ${umumiyNarx}-USD`;
     // mayonezText.textContent = `mayonez olindi `;
     document.getElementById("mayonez").value = "disable";
   }
@@ -170,11 +248,19 @@ ketchup.addEventListener("input", (e) => {
   if (ketchup.checked === true) {
     ketchupDiv.classList.add("ketchuplar");
     ketchupDiv.style.display = "block";
+    umumiyNarx += 0.5;
+    document.querySelector(
+      ".narxlovchi"
+    ).textContent = `Pitsa narxi : ${umumiyNarx}-USD`;
     // ketchupText.textContent = `ketchup qoshildi `;
     document.getElementById("ketchup").value = "active";
   } else {
     ketchupDiv.classList.add("ketchuplar");
     ketchupDiv.style.display = "none";
+    umumiyNarx -= 0.5;
+    document.querySelector(
+      ".narxlovchi"
+    ).textContent = `Pitsa narxi : ${umumiyNarx}-USD`;
     // ketchupText.textContent = `ketchup olindi `;
     document.getElementById("ketchup").value = "disable";
   }
@@ -196,11 +282,19 @@ kokat.addEventListener("input", (e) => {
   if (kokat.checked === true) {
     kokatDiv.classList.add("kokatlar");
     kokatDiv.style.display = "block";
+    umumiyNarx += 0.5;
+    document.querySelector(
+      ".narxlovchi"
+    ).textContent = `Pitsa narxi : ${umumiyNarx}-USD`;
     // kokatText.textContent = `kokat qoshildi `;
     document.getElementById("kokat").value = "active";
   } else {
     kokatDiv.classList.add("kokatlar");
     kokatDiv.style.display = "none";
+    umumiyNarx -= 0.5;
+    document.querySelector(
+      ".narxlovchi"
+    ).textContent = `Pitsa narxi : ${umumiyNarx}-USD`;
     // kokatText.textContent = `kokat olindi `;
     document.getElementById("kokat").value = "disable";
   }

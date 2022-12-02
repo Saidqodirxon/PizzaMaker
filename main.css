@@ -1,7 +1,7 @@
 .pitsa {
   width: 500px;
   height: 500px;
-  background: #e8944f;
+  /* background: #e8944f; */
   border-radius: 50%;
   display: flex;
 }
@@ -10,6 +10,7 @@
   width: 450px;
   height: 450px;
   background: #fcd47c;
+  border: 2px solid #e8944f;
   border-radius: 50%;
   justify-content: center;
   margin: 0 auto;
@@ -1677,21 +1678,52 @@ body {
   margin-left: 20%;
 }
 
-.maxsus-form {
+.maxsus-form h2 {
+  font-size: 20px;
   color: green;
 }
 .h2 {
   padding: 0;
   margin: 0;
   margin-bottom: 10px;
+  color: #0f0f;
 }
 
 .chiziq {
-  margin-left: 35%;
+  margin-left: 20%;
   border-left: 10px solid crimson;
 }
 
 .logo-text {
-  display: flex;
-  justify-content: center;
+  text-align: center;
+  color: white;
+}
+.kok {
+  color: blue;
+}
+
+.oq {
+  color: #00000059;
+}
+.yashil {
+  color: green;
+}
+
+.narx {
+  margin-top: 30%;
+}
+
+.narxlovchi {
+  color: aqua;
+}
+
+label,
+input {
+  width: 10px;
+  height: 20px;
+  padding: 5px;
+  margin: 5px;
+  background: crimson;
+  color: white;
+  border-radius: 10px;
 }
